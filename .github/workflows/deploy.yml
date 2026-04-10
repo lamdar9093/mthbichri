@@ -21,7 +21,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT }}
         script: |
-          cd /var/www/dahiramtbe
+          cd /var/www/mthbichri
           git pull origin main
           docker compose down
           docker compose build --no-cache
