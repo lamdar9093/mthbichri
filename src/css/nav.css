@@ -215,6 +215,15 @@
     transform: translateY(20px);
     opacity: 0;
     transition: all var(--duration-slow) var(--ease-out);
+    color: var(--color-neutral-800);
+  }
+
+  .nav__link--active {
+    color: var(--color-primary-700);
+  }
+
+  .nav__link:hover {
+    color: var(--color-primary-700);
   }
 
   .nav__links--open .nav__link {
