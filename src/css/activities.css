@@ -1,0 +1,149 @@
+/* ========================================
+   ACTIVITÉS
+   ======================================== */
+
+.activities {
+  background: var(--color-neutral-50);
+}
+
+.activities__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: var(--space-6);
+}
+
+/* --- Activity Card --- */
+.activity-card {
+  position: relative;
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--duration-normal) var(--ease-out);
+  border: 1px solid var(--color-neutral-100);
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: transparent;
+}
+
+/* --- Badge --- */
+.activity-card__badge {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  letter-spacing: var(--tracking-wide);
+}
+
+.activity-card__badge--past {
+  background: var(--color-neutral-100);
+  color: var(--color-neutral-500);
+}
+
+.activity-card__badge--upcoming {
+  background: var(--color-primary-50);
+  color: var(--color-primary-700);
+}
+
+/* --- Card with upcoming glow --- */
+.activity-card--upcoming {
+  border-color: var(--color-primary-100);
+}
+
+.activity-card--upcoming:hover {
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
+}
+
+/* --- Date --- */
+.activity-card__date {
+  padding: var(--space-6) var(--space-6) 0;
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.activity-card__day {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: 700;
+  color: var(--color-primary-700);
+  line-height: 1;
+}
+
+.activity-card__month {
+  font-size: var(--text-sm);
+  color: var(--color-neutral-500);
+  font-weight: 500;
+}
+
+.activity-card--past .activity-card__day {
+  color: var(--color-neutral-400);
+}
+
+/* --- Content --- */
+.activity-card__content {
+  padding: var(--space-4) var(--space-6) var(--space-6);
+}
+
+.activity-card__title {
+  font-size: var(--text-xl);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  font-family: var(--font-heading);
+}
+
+.activity-card__location,
+.activity-card__detail {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-neutral-600);
+  margin-bottom: var(--space-2);
+}
+
+.activity-card__icon {
+  font-size: var(--text-sm);
+  flex-shrink: 0;
+}
+
+.activity-card__description {
+  font-size: var(--text-sm);
+  color: var(--color-neutral-500);
+  line-height: var(--leading-relaxed);
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-neutral-100);
+}
+
+/* --- Grand Magal — Carte mise en avant --- */
+.activity-card--highlight {
+  border-color: var(--color-gold-300);
+  background: linear-gradient(135deg, var(--color-white), var(--color-gold-50));
+}
+
+.activity-card--highlight .activity-card__day {
+  color: var(--color-gold-600);
+}
+
+.activity-card--highlight .activity-card__title {
+  color: var(--color-gold-700);
+}
+
+.activity-card--highlight:hover {
+  box-shadow: var(--shadow-xl), var(--shadow-gold);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .activities__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}

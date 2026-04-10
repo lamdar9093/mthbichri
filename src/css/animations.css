@@ -1,0 +1,145 @@
+/* ========================================
+   ANIMATIONS — Scroll Reveal & Micro-interactions
+   ======================================== */
+
+/* --- Scroll Reveal Base --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity var(--duration-slower) var(--ease-out),
+    transform var(--duration-slower) var(--ease-out);
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal--delay-1 {
+  transition-delay: 150ms;
+}
+
+.reveal--delay-2 {
+  transition-delay: 300ms;
+}
+
+.reveal--delay-3 {
+  transition-delay: 450ms;
+}
+
+/* --- Scale Reveal --- */
+.reveal--scale {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.reveal--scale.reveal--visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* --- Card Hover Micro-interactions --- */
+.activity-card,
+.pricing-card {
+  transition:
+    transform var(--duration-normal) var(--ease-spring),
+    box-shadow var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out);
+}
+
+/* --- Button Ripple --- */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn__ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  animation: ripple 600ms linear;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* --- Input Focus Animation --- */
+.form__input,
+.form__select {
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-normal) var(--ease-out);
+}
+
+/* --- Floating Label Effect (subtle) --- */
+.form__group {
+  position: relative;
+}
+
+/* --- Nav link underline animation --- */
+.nav__link {
+  position: relative;
+}
+
+/* --- Smooth Section Transition Overlay --- */
+.activities::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(to bottom, var(--color-white), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.activities {
+  position: relative;
+}
+
+/* --- Subtle Parallax for Section Tags --- */
+.section__tag {
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+/* --- Prefers Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .hero__pattern {
+    animation: none;
+  }
+
+  .hero__scroll-indicator {
+    animation: none;
+  }
+
+  .hero__ornament,
+  .hero__ornament-inner {
+    animation: none;
+  }
+
+  .hero::before,
+  .hero::after {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

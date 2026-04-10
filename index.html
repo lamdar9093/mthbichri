@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dahira Mafatihoul Bichri Touba Estrie — Unifier les Mourides de l'Estrie dans la voie de Serigne Touba." />
+  <title>Dahira Mafatihoul Bichri — Touba Estrie</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/src/img/logodudahira.png" />
+  <link rel="apple-touch-icon" href="/src/img/logodudahira.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/src/css/variables.css" />
+  <link rel="stylesheet" href="/src/css/base.css" />
+  <link rel="stylesheet" href="/src/css/nav.css" />
+  <link rel="stylesheet" href="/src/css/hero.css" />
+  <link rel="stylesheet" href="/src/css/activities.css" />
+  <link rel="stylesheet" href="/src/css/membership.css" />
+  <link rel="stylesheet" href="/src/css/footer.css" />
+  <link rel="stylesheet" href="/src/css/animations.css" />
+</head>
+<body>
+
+  <!-- ========================================
+       NAVIGATION
+       ======================================== -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#accueil" class="nav__brand">
+        <div class="nav__logo">
+          <img src="/src/img/logodudahira.png" alt="Logo Dahira Mafatihoul Bichri" class="nav__logo-img" />
+        </div>
+        <div class="nav__brand-text">
+          <span class="nav__name">Mafatihoul Bichri</span>
+          <span class="nav__subtitle">Touba Estrie</span>
+        </div>
+      </a>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#accueil" class="nav__link nav__link--active">Accueil</a></li>
+        <li><a href="#activites" class="nav__link">Activités</a></li>
+        <li><a href="#adhesion" class="nav__link">Adhésion</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+        <span class="nav__toggle-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========================================
+       HERO SECTION
+       ======================================== -->
+  <section class="hero" id="accueil">
+    <div class="hero__bg">
+      <div class="hero__pattern"></div>
+    </div>
+    <div class="hero__container">
+      <div class="hero__content reveal">
+        <p class="hero__bismillah" lang="ar">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
+        <h1 class="hero__title">
+          Dahira Mafatihoul Bichri
+          <span class="hero__title-highlight">Touba Estrie</span>
+        </h1>
+        <p class="hero__mission">
+          Unifier tous les Mourides de l'Estrie dans la voie de
+          <strong>Serigne Touba Cheikh Ahmadou Bamba</strong> ﷺ
+        </p>
+        <div class="hero__actions">
+          <a href="#adhesion" class="btn btn--primary">
+            <span class="btn__icon">✦</span>
+            Rejoindre le dahira
+          </a>
+          <button class="btn btn--outline btn--disabled" disabled>
+            Payer ma cotisation
+            <span class="badge badge--soon">Bientôt</span>
+          </button>
+        </div>
+      </div>
+      <div class="hero__decoration reveal reveal--delay-1">
+        <div class="hero__logo-wrap">
+          <img src="/src/img/logodudahira.png" alt="Logo Dahira Mafatihoul Bichri Touba Estrie" class="hero__logo-img" />
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator">
+      <span>Découvrir</span>
+      <div class="hero__scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       ACTIVITÉS
+       ======================================== -->
+  <section class="section activities" id="activites">
+    <div class="container">
+      <header class="section__header reveal">
+        <span class="section__tag">Vie du dahira</span>
+        <h2 class="section__title">Nos activités</h2>
+        <p class="section__description">
+          Retrouvez nos événements passés et à venir. Ensemble, nous renforçons
+          les liens de la communauté Mouride en Estrie.
+        </p>
+      </header>
+
+      <div class="activities__grid">
+        <!-- Événement passé -->
+        <article class="activity-card activity-card--past reveal">
+          <div class="activity-card__badge activity-card__badge--past">Passé</div>
+          <div class="activity-card__date">
+            <span class="activity-card__day">04</span>
+            <span class="activity-card__month">Avril 2026</span>
+          </div>
+          <div class="activity-card__content">
+            <h3 class="activity-card__title">Séance de fondation</h3>
+            <p class="activity-card__location">
+              <span class="activity-card__icon">📍</span>
+              1467 Bld Mi-Vallon
+            </p>
+            <p class="activity-card__detail">
+              <span class="activity-card__icon">👥</span>
+              27 talibés présents
+            </p>
+            <p class="activity-card__description">
+              Assemblée fondatrice du Dahira Mafatihoul Bichri Touba Estrie.
+              Alhamdoulillah pour ce premier pas historique.
+            </p>
+          </div>
+        </article>
+
+        <!-- Événement à venir 1
+        <article class="activity-card activity-card--upcoming reveal reveal--delay-1">
+          <div class="activity-card__badge activity-card__badge--upcoming">À venir</div>
+          <div class="activity-card__date">
+            <span class="activity-card__day">11</span>
+            <span class="activity-card__month">Avril 2026</span>
+          </div>
+          <div class="activity-card__content">
+            <h3 class="activity-card__title">Baptême du fils de Babacar Touré</h3>
+            <p class="activity-card__location">
+              <span class="activity-card__icon">📍</span>
+              212 Rue Dani
+            </p>
+            <p class="activity-card__detail">
+              <span class="activity-card__icon">🕐</span>
+              Khassaïdes &amp; prières — 15h à 16h
+            </p>
+            <p class="activity-card__description">
+              Samedi 11 Avril — Récitation de Khassaïdes et prières pour
+              célébrer cette naissance bénie. Tous les talibés sont invités.
+            </p>
+          </div>
+        </article> -->
+
+        <!-- Événement à venir 2 -->
+        <article class="activity-card activity-card--upcoming reveal reveal--delay-2">
+          <div class="activity-card__badge activity-card__badge--upcoming">À venir</div>
+          <div class="activity-card__date">
+            <span class="activity-card__day">26</span>
+            <span class="activity-card__month">Avril 2026</span>
+          </div>
+          <div class="activity-card__content">
+            <h3 class="activity-card__title">Tiante Sante Serigne</h3>
+            <p class="activity-card__location">
+              <span class="activity-card__icon">📍</span>
+              Trois-Rivières
+            </p>
+            <p class="activity-card__detail">
+              <span class="activity-card__icon">🕌</span>
+              Mobilisation du dahira
+            </p>
+            <p class="activity-card__description">
+              Grande cérémonie religieuse annuelle. Le dahira se mobilise pour
+              représenter l'Estrie. Déplacement collectif organisé.
+            </p>
+          </div>
+        </article>
+
+        <!-- Grand Magal de Touba -->
+        <article class="activity-card activity-card--upcoming activity-card--highlight reveal reveal--delay-3">
+          <div class="activity-card__badge activity-card__badge--upcoming">À venir</div>
+          <div class="activity-card__date">
+            <span class="activity-card__day">18</span>
+            <span class="activity-card__month">Safar 1448</span>
+          </div>
+          <div class="activity-card__content">
+            <h3 class="activity-card__title">Grand Magal de Touba</h3>
+            <p class="activity-card__location">
+              <span class="activity-card__icon">🕌</span>
+              Lieu de la célébration à confirmer
+            </p>
+            <p class="activity-card__detail">
+              <span class="activity-card__icon">📅</span>
+              18 Safar — Date grégorienne à confirmer
+            </p>
+            <p class="activity-card__description">
+              Commémoration du départ en exil de Serigne Touba Cheikh Ahmadou Bamba.
+              Le plus grand rassemblement annuel de la communauté Mouride.
+              Le dahira organisera des Khassaïdes et une célébration en Estrie, insha'Allah.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       ADHÉSION
+       ======================================== -->
+  <section class="section membership" id="adhesion">
+    <div class="container">
+      <header class="section__header reveal">
+        <span class="section__tag">Devenir membre</span>
+        <h2 class="section__title">Adhésion au dahira</h2>
+        <p class="section__description">
+          Rejoindre le dahira, c'est contribuer à bâtir une communauté Mouride
+          forte et unie en Estrie. Vos cotisations financent nos activités,
+          l'accueil des nouveaux arrivants et les projets communautaires.
+        </p>
+      </header>
+
+      <!-- Frais d'adhésion -->
+      <div class="membership__annual reveal">
+        <div class="membership__annual-card">
+          <span class="membership__annual-icon">☪</span>
+          <h3>Frais d'adhésion annuels</h3>
+          <div class="membership__annual-price">
+            <span class="membership__price-amount">10</span>
+            <span class="membership__price-currency">$</span>
+            <span class="membership__price-period">/ an</span>
+          </div>
+          <p>Montant symbolique, renouvelable chaque année</p>
+        </div>
+      </div>
+
+      <!-- Catégories de cotisation -->
+      <h3 class="membership__subtitle reveal">Cotisation mensuelle</h3>
+      <p class="membership__confidential reveal">
+        Le choix de la catégorie est <strong>strictement confidentiel</strong>
+        entre le membre et le trésorier.
+      </p>
+
+      <div class="pricing__grid reveal">
+        <!-- Catégorie C -->
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <span class="pricing-card__category">Catégorie C</span>
+          </div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">18</span>
+            <span class="pricing-card__currency">$</span>
+            <span class="pricing-card__period">/ mois</span>
+          </div>
+          <div class="pricing-card__first-payment">
+            <span class="pricing-card__first-payment-label">Premier paiement</span>
+            <span class="pricing-card__first-payment-amount">28 $</span>
+            <span class="pricing-card__first-payment-note">10$ adhésion + 18$ cotisation</span>
+          </div>
+          <a href="#formulaire" class="btn btn--outline btn--small">Choisir</a>
+        </div>
+
+        <!-- Catégorie B — Populaire -->
+        <div class="pricing-card pricing-card--popular">
+          <div class="pricing-card__ribbon">Populaire</div>
+          <div class="pricing-card__header">
+            <span class="pricing-card__category">Catégorie B</span>
+          </div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">30</span>
+            <span class="pricing-card__currency">$</span>
+            <span class="pricing-card__period">/ mois</span>
+          </div>
+          <div class="pricing-card__first-payment">
+            <span class="pricing-card__first-payment-label">Premier paiement</span>
+            <span class="pricing-card__first-payment-amount">40 $</span>
+            <span class="pricing-card__first-payment-note">10$ adhésion + 30$ cotisation</span>
+          </div>
+          <a href="#formulaire" class="btn btn--primary btn--small">Choisir</a>
+        </div>
+
+        <!-- Catégorie A -->
+        <div class="pricing-card">
+          <div class="pricing-card__header">
+            <span class="pricing-card__category">Catégorie A</span>
+          </div>
+          <div class="pricing-card__price">
+            <span class="pricing-card__amount">50</span>
+            <span class="pricing-card__currency">$</span>
+            <span class="pricing-card__period">/ mois</span>
+          </div>
+          <div class="pricing-card__first-payment">
+            <span class="pricing-card__first-payment-label">Premier paiement</span>
+            <span class="pricing-card__first-payment-amount">60 $</span>
+            <span class="pricing-card__first-payment-note">10$ adhésion + 50$ cotisation</span>
+          </div>
+          <a href="#formulaire" class="btn btn--outline btn--small">Choisir</a>
+        </div>
+      </div>
+
+      <!-- Paiement en ligne (V2) -->
+      <div class="membership__online-pay reveal">
+        <div class="membership__online-pay-card">
+          <span class="membership__online-pay-icon">💳</span>
+          <p>Paiement en ligne des cotisations</p>
+          <span class="badge badge--soon badge--large">Bientôt disponible</span>
+        </div>
+      </div>
+
+      <!-- Formulaire d'adhésion -->
+      <div class="membership__form-section reveal" id="formulaire">
+        <h3 class="membership__form-title">Formulaire d'adhésion</h3>
+        <form class="form" id="adhesionForm" novalidate>
+          <div class="form__grid">
+            <div class="form__group">
+              <label class="form__label" for="fullName">Prénom et nom</label>
+              <input
+                class="form__input"
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Entrez votre prénom et nom"
+                required
+              />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="phone">Numéro de téléphone</label>
+              <div class="form__phone-wrap">
+                <span class="form__phone-flag">🇨🇦 +1</span>
+                <input
+                  class="form__input form__input--phone"
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="(819) 000-0000"
+                  maxlength="14"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="city">Ville</label>
+              <select class="form__select" id="city" name="city" required>
+                <option value="" disabled selected>Choisissez votre ville</option>
+                <option value="Sherbrooke">Sherbrooke</option>
+                <option value="Magog">Magog</option>
+                <option value="Granby">Granby</option>
+                <option value="Drummondville">Drummondville</option>
+                <option value="Victoriaville">Victoriaville</option>
+                <option value="Coaticook">Coaticook</option>
+                <option value="Windsor">Windsor</option>
+                <option value="Richmond">Richmond</option>
+                <option value="Lac-Mégantic">Lac-Mégantic</option>
+                <option value="Asbestos">Asbestos (Val-des-Sources)</option>
+                <option value="East Angus">East Angus</option>
+                <option value="Waterville">Waterville</option>
+                <option value="Stanstead">Stanstead</option>
+                <option value="__autre">Je ne trouve pas ma ville</option>
+              </select>
+              <input
+                class="form__input form__input--other-city"
+                type="text"
+                id="cityOther"
+                name="cityOther"
+                placeholder="Entrez le nom de votre ville"
+                hidden
+              />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="category">Catégorie de cotisation</label>
+              <select class="form__select" id="category" name="category" required>
+                <option value="" disabled selected>Choisissez une catégorie</option>
+                <option value="C">Catégorie C — 18$ / mois</option>
+                <option value="B">Catégorie B — 30$ / mois</option>
+                <option value="A">Catégorie A — 50$ / mois</option>
+              </select>
+            </div>
+          </div>
+          <!-- Récapitulatif dynamique du premier paiement -->
+          <div class="form__summary" id="formSummary" hidden>
+            <div class="form__summary-header">
+              <span class="form__summary-icon">✦</span>
+              <span class="form__summary-title">Récapitulatif de votre premier paiement</span>
+            </div>
+            <div class="form__summary-body">
+              <div class="form__summary-row">
+                <span>Frais d'adhésion annuels</span>
+                <span>10 $</span>
+              </div>
+              <div class="form__summary-row">
+                <span>Cotisation mensuelle (<span id="summaryCategory">—</span>)</span>
+                <span id="summaryMonthly">—</span>
+              </div>
+              <div class="form__summary-divider"></div>
+              <div class="form__summary-row form__summary-row--total">
+                <span>Total à prévoir ce mois-ci</span>
+                <span id="summaryTotal">—</span>
+              </div>
+            </div>
+            <div class="form__summary-recurring">
+              <span class="form__summary-recurring-icon">↻</span>
+              <div>
+                <p class="form__summary-recurring-main">Les mois suivants : <strong id="summaryRecurring">—</strong>/mois</p>
+                <p class="form__summary-recurring-annual">Les 10$ d'adhésion seront renouvelés dans 1 an, à la date de votre inscription.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Choix du mode de paiement -->
+          <div class="form__payment-choice">
+            <p class="form__payment-choice-label">Comment souhaitez-vous régler votre premier paiement ?</p>
+            <div class="form__payment-options">
+              <label class="payment-option" id="payOptionInterac">
+                <input type="radio" name="paymentMethod" value="interac" />
+                <div class="payment-option__card">
+                  <span class="payment-option__icon">⚡</span>
+                  <div>
+                    <span class="payment-option__title">Payer par Interac maintenant</span>
+                    <span class="payment-option__desc">Je vire le montant tout de suite</span>
+                  </div>
+                </div>
+              </label>
+              <label class="payment-option" id="payOptionContact">
+                <input type="radio" name="paymentMethod" value="contact" />
+                <div class="payment-option__card">
+                  <span class="payment-option__icon">📞</span>
+                  <div>
+                    <span class="payment-option__title">Être contacté pour le paiement</span>
+                    <span class="payment-option__desc">Un responsable me contactera</span>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <!-- Panneau Interac (affiché si "Interac maintenant" est sélectionné) -->
+            <div class="interac-panel" id="interacPanel" hidden>
+              <div class="interac-panel__header">
+                <span class="interac-panel__header-icon">⚡</span>
+                <span class="interac-panel__header-title">Envoyer votre virement Interac</span>
+              </div>
+
+              <p class="interac-panel__intro">
+                Ouvrez votre application bancaire, envoyez le virement à l'adresse ci-dessous, puis revenez ici pour confirmer.
+              </p>
+
+              <div class="interac-panel__fields">
+                <div class="interac-panel__field">
+                  <span class="interac-panel__field-label">Adresse courriel</span>
+                  <div class="interac-panel__field-value-wrap">
+                    <span class="interac-panel__field-value" id="interacEmail">finances.mbte@gmail.com</span>
+                    <button type="button" class="interac-panel__copy-btn" id="copyEmailBtn" aria-label="Copier l'adresse">
+                      <span class="interac-panel__copy-icon">⎘</span>
+                      <span class="interac-panel__copy-text">Copier</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="interac-panel__field">
+                  <span class="interac-panel__field-label">Question de sécurité</span>
+                  <span class="interac-panel__field-value">quoi</span>
+                </div>
+                <div class="interac-panel__field">
+                  <span class="interac-panel__field-label">Réponse</span>
+                  <span class="interac-panel__field-value interac-panel__field-value--answer">mareponse</span>
+                </div>
+              </div>
+
+              <div class="interac-panel__note">
+                <span class="interac-panel__note-icon">✎</span>
+                <div>
+                  <p class="interac-panel__note-title">Dans le message du virement, mentionnez :</p>
+                  <p class="interac-panel__note-text">Le but de la transaction — ex. : <em>Adhésion — Prénom Nom</em></p>
+                </div>
+              </div>
+
+              <!-- Confirmation obligatoire avant de soumettre -->
+              <label class="interac-panel__confirm" id="interacConfirmWrap">
+                <input type="checkbox" id="interacConfirm" name="interacConfirm" />
+                <span class="interac-panel__confirm-check"></span>
+                <span class="interac-panel__confirm-text">J'ai bien envoyé mon virement Interac</span>
+              </label>
+            </div>
+          </div>
+
+          <button class="btn btn--primary btn--full" type="submit" id="submitBtn">
+            <span class="btn__icon">✦</span>
+            <span id="submitBtnText">Soumettre ma demande d'adhésion</span>
+          </button>
+          <p class="form__note">
+            Votre choix de catégorie restera confidentiel entre vous et le trésorier.
+          </p>
+        </form>
+
+        <!-- Message de succès -->
+        <div class="form__success" id="formSuccess" hidden>
+          <div class="form__success-icon">✓</div>
+          <h4>Dieuredieuf !</h4>
+          <p id="formSuccessMsg">Votre demande d'adhésion a été envoyée avec succès. Un responsable du dahira vous contactera bientôt, insha'Allah.</p>
+          <button type="button" class="btn btn--outline btn--small form__success-reset" id="formReset">
+            ← Soumettre une autre demande
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FOOTER / CONTACT
+       ======================================== -->
+  <footer class="footer" id="contact">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="/src/img/logodudahira.png" alt="Logo Dahira" class="footer__logo-img" />
+        </div>
+        <h3 class="footer__name">Dahira Mafatihoul Bichri</h3>
+        <p class="footer__location">Touba Estrie — Québec, Canada</p>
+      </div>
+
+      <div class="footer__devise">
+        <p class="footer__devise-text" lang="wo">
+          "Mafaatihoul Bichri" — "Les clés de la bonne nouvelle ou de la félicité". Que ce dahira soit une source de bénédictions et de richesses spirituelles pour tous les talibés de l'Estrie, insha'Allah.
+        </p>
+      </div>
+
+      <div class="footer__contact">
+        <p class="footer__contact-label">Pour nous joindre</p>
+        <p class="footer__contact-name">Dieuwrine S. Ibrahima Mbaye</p>
+        <a href="tel:+15147753514" class="footer__contact-phone">+1 (514) 775-3514</a>
+      </div>
+
+      <div class="footer__links">
+        <a href="#accueil">Accueil</a>
+        <a href="#activites">Activités</a>
+        <a href="#adhesion">Adhésion</a>
+      </div>
+
+      <div class="footer__bottom">
+        <p>Dieuredieuf — Que la barke de Serigne Touba soit sur nous tous.</p>
+        <p class="footer__copy">&copy; 2026 Dahira Mafatihoul Bichri Touba Estrie</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

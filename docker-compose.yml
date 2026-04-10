@@ -1,0 +1,20 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dahiramtbe
+    restart: unless-stopped
+    networks:
+      - traefik-net
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.dahiramtbe.rule=Host(`mthbichri.ca`) || Host(`www.mthbichri.ca`)"
+      - "traefik.http.routers.dahiramtbe.entrypoints=websecure"
+      - "traefik.http.routers.dahiramtbe.tls.certresolver=letsencrypt"
+      - "traefik.http.services.dahiramtbe.loadbalancer.server.port=80"
+
+networks:
+  traefik-net:
+    external: true
+    name: traefik-net
