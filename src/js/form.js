@@ -64,7 +64,7 @@ export function initForm() {
   }
 
   // --- Récapitulatif dynamique du premier paiement ---
-  const categoryAmounts = { A: 50, B: 30, C: 18 };
+  const categoryAmounts = { A: 45, B: 30, C: 15 };
   const categorySelect  = document.getElementById('category');
   const summaryBox      = document.getElementById('formSummary');
   const summaryCategory = document.getElementById('summaryCategory');
@@ -207,7 +207,7 @@ export function initForm() {
     }
 
     // Envoyer les données à Google Sheets
-    const categoryAmountsMap = { A: 50, B: 30, C: 18 };
+    const categoryAmountsMap = { A: 45, B: 30, C: 15 };
     submitToSheets({
       fullName,
       phone,

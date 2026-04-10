@@ -224,9 +224,7 @@
         <span class="section__tag">Devenir membre</span>
         <h2 class="section__title">Adhésion au dahira</h2>
         <p class="section__description">
-          Rejoindre le dahira, c'est contribuer à bâtir une communauté Mouride
-          forte et unie en Estrie. Vos cotisations financent nos activités,
-          l'accueil des nouveaux arrivants et les projets communautaires.
+          Loin de nos familles, le dahira est notre maison commune. Rejoindre, c'est choisir de ne pas traverser l'exil seul — c'est s'ancrer dans une fraternité Mouride vivante en Estrie.
         </p>
       </header>
 
@@ -240,16 +238,46 @@
             <span class="membership__price-currency">$</span>
             <span class="membership__price-period">/ an</span>
           </div>
-          <p>Montant symbolique, renouvelable chaque année</p>
+          <p class="membership__annual-desc">Montant symbolique, renouvelable chaque année</p>
+
+          <!-- Timeline de paiement -->
+          <div class="membership__timeline">
+            <div class="membership__timeline-step">
+              <div class="membership__timeline-dot membership__timeline-dot--now">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5"/><circle cx="7" cy="7" r="3" fill="currentColor"/></svg>
+              </div>
+              <div class="membership__timeline-info">
+                <span class="membership__timeline-when">Aujourd'hui</span>
+                <span class="membership__timeline-what">10 $ — frais d'adhésion</span>
+              </div>
+            </div>
+            <div class="membership__timeline-line"></div>
+            <div class="membership__timeline-step">
+              <div class="membership__timeline-dot membership__timeline-dot--next">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.5" stroke-dasharray="3 2"/></svg>
+              </div>
+              <div class="membership__timeline-info">
+                <span class="membership__timeline-when">Le 9 <span id="nextMonthName"></span></span>
+                <span class="membership__timeline-what">Première cotisation mensuelle</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#formulaire" class="btn btn--primary membership__annual-cta">Rejoindre le dahira</a>
         </div>
       </div>
 
       <!-- Catégories de cotisation -->
-      <h3 class="membership__subtitle reveal">Cotisation mensuelle</h3>
-      <p class="membership__confidential reveal">
-        Le choix de la catégorie est <strong>strictement confidentiel</strong>
-        entre le membre et le trésorier.
-      </p>
+      <div class="membership__monthly-intro reveal">
+        <h3 class="membership__subtitle">Cotisation mensuelle</h3>
+        <p class="membership__monthly-why">
+          Chaque mois, vos cotisations financent concrètement : organisation d'événements, soutien aux nouveaux arrivants, projets communautaires. Trois catégories existent — chaque membre choisit selon ses moyens, en toute discrétion.
+        </p>
+        <p class="membership__confidential">
+          Le choix de la catégorie est <strong>strictement confidentiel</strong>
+          entre le membre et le trésorier.
+        </p>
+      </div>
 
       <div class="pricing__grid reveal">
         <!-- Catégorie C -->
@@ -258,14 +286,9 @@
             <span class="pricing-card__category">Catégorie C</span>
           </div>
           <div class="pricing-card__price">
-            <span class="pricing-card__amount">18</span>
+            <span class="pricing-card__amount">15</span>
             <span class="pricing-card__currency">$</span>
             <span class="pricing-card__period">/ mois</span>
-          </div>
-          <div class="pricing-card__first-payment">
-            <span class="pricing-card__first-payment-label">Premier paiement</span>
-            <span class="pricing-card__first-payment-amount">28 $</span>
-            <span class="pricing-card__first-payment-note">10$ adhésion + 18$ cotisation</span>
           </div>
           <a href="#formulaire" class="btn btn--outline btn--small">Choisir</a>
         </div>
@@ -281,11 +304,6 @@
             <span class="pricing-card__currency">$</span>
             <span class="pricing-card__period">/ mois</span>
           </div>
-          <div class="pricing-card__first-payment">
-            <span class="pricing-card__first-payment-label">Premier paiement</span>
-            <span class="pricing-card__first-payment-amount">40 $</span>
-            <span class="pricing-card__first-payment-note">10$ adhésion + 30$ cotisation</span>
-          </div>
           <a href="#formulaire" class="btn btn--primary btn--small">Choisir</a>
         </div>
 
@@ -295,14 +313,9 @@
             <span class="pricing-card__category">Catégorie A</span>
           </div>
           <div class="pricing-card__price">
-            <span class="pricing-card__amount">50</span>
+            <span class="pricing-card__amount">45</span>
             <span class="pricing-card__currency">$</span>
             <span class="pricing-card__period">/ mois</span>
-          </div>
-          <div class="pricing-card__first-payment">
-            <span class="pricing-card__first-payment-label">Premier paiement</span>
-            <span class="pricing-card__first-payment-amount">60 $</span>
-            <span class="pricing-card__first-payment-note">10$ adhésion + 50$ cotisation</span>
           </div>
           <a href="#formulaire" class="btn btn--outline btn--small">Choisir</a>
         </div>
@@ -380,9 +393,9 @@
               <label class="form__label" for="category">Catégorie de cotisation</label>
               <select class="form__select" id="category" name="category" required>
                 <option value="" disabled selected>Choisissez une catégorie</option>
-                <option value="C">Catégorie C — 18$ / mois</option>
+                <option value="C">Catégorie C — 15$ / mois</option>
                 <option value="B">Catégorie B — 30$ / mois</option>
-                <option value="A">Catégorie A — 50$ / mois</option>
+                <option value="A">Catégorie A — 45$ / mois</option>
               </select>
             </div>
           </div>

@@ -13,4 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initForm();
   initRipple();
+
+  // Afficher le mois de la première cotisation (mois prochain)
+  const el = document.getElementById('nextMonthName');
+  if (el) {
+    const months = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+    const nextMonth = (new Date().getMonth() + 1) % 12;
+    el.textContent = months[nextMonth];
+  }
 });
