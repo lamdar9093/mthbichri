@@ -20,20 +20,35 @@ export function initNav() {
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  // Mobile toggle
+  // Mobile drawer
+  const backdrop = document.getElementById('navBackdrop');
+
+  function openMenu() {
+    links.classList.add('nav__links--open');
+    toggle.classList.add('nav__toggle--active');
+    backdrop.classList.add('nav__backdrop--visible');
+    nav.classList.add('nav--menu-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    links.classList.remove('nav__links--open');
+    toggle.classList.remove('nav__toggle--active');
+    backdrop.classList.remove('nav__backdrop--visible');
+    nav.classList.remove('nav--menu-open');
+    document.body.style.overflow = '';
+  }
+
   toggle.addEventListener('click', () => {
-    const isOpen = links.classList.toggle('nav__links--open');
-    toggle.classList.toggle('nav__toggle--active');
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+    links.classList.contains('nav__links--open') ? closeMenu() : openMenu();
   });
 
-  // Close mobile menu on link click
+  // Close on backdrop click
+  backdrop.addEventListener('click', closeMenu);
+
+  // Close on link click
   navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      links.classList.remove('nav__links--open');
-      toggle.classList.remove('nav__toggle--active');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', closeMenu);
   });
 
   // Active link tracking via IntersectionObserver

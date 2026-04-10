@@ -27,6 +27,14 @@
 .membership__annual-icon {
   width: 32px;
   height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.membership__annual-icon-img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 

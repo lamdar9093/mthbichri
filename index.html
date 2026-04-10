@@ -56,6 +56,9 @@
     </div>
   </nav>
 
+  <!-- Backdrop outside nav to avoid backdrop-filter containing block -->
+  <div class="nav__backdrop" id="navBackdrop"></div>
+
   <!-- ========================================
        HERO SECTION
        ======================================== -->
@@ -230,7 +233,7 @@
       <!-- Frais d'adhésion -->
       <div class="membership__annual reveal">
         <div class="membership__annual-card">
-          <span class="membership__annual-icon">☪</span>
+          <span class="membership__annual-icon"><img src="/src/img/logodudahira.png" alt="Logo Dahira" class="membership__annual-icon-img" /></span>
           <h3>Frais d'adhésion annuels</h3>
           <div class="membership__annual-price">
             <span class="membership__price-amount">10</span>

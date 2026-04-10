@@ -9,7 +9,9 @@
   right: 0;
   z-index: var(--z-nav);
   padding: var(--space-4) 0;
-  transition: all var(--duration-normal) var(--ease-out);
+  transition: padding var(--duration-normal) var(--ease-out),
+              background var(--duration-normal) var(--ease-out),
+              box-shadow var(--duration-normal) var(--ease-out);
 }
 
 .nav--scrolled {
@@ -18,6 +20,13 @@
   -webkit-backdrop-filter: blur(20px) saturate(1.8);
   box-shadow: 0 1px 0 rgba(10, 15, 13, 0.06);
   padding: var(--space-3) 0;
+}
+
+/* Remove backdrop-filter when mobile menu is open to avoid containing block issues */
+.nav--menu-open.nav--scrolled {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background: var(--color-white);
 }
 
 .nav__container {
@@ -180,61 +189,110 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* --- Mobile Menu --- */
+/* --- Mobile Drawer Menu --- */
+
+/* Backdrop overlay — hidden on desktop */
+.nav__backdrop {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .nav__toggle {
     display: flex;
   }
 
-  .nav__links {
+  /* Semi-transparent backdrop — outside nav, below nav z-index but above page content */
+  .nav__backdrop {
+    display: block;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: calc(var(--z-nav) + 10);
-    background: var(--color-white);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: var(--space-2);
+    inset: 0;
+    z-index: calc(var(--z-nav) - 1);
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     opacity: 0;
     visibility: hidden;
-    transition: all var(--duration-slow) var(--ease-out);
+    transition: all var(--duration-normal) var(--ease-out);
   }
 
-  .nav__links--open {
+  .nav__backdrop--visible {
     opacity: 1;
     visibility: visible;
   }
 
+  /* Drawer panel — outside nav, slides from right */
+  .nav__links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: 75%;
+    max-width: 320px;
+    z-index: calc(var(--z-nav) + 2);
+    background: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0;
+    padding: calc(var(--space-6) * 3) var(--space-6) var(--space-6);
+    transform: translateX(100%);
+    transition: transform var(--duration-normal) var(--ease-out);
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.15);
+    list-style: none;
+    margin: 0;
+  }
+
+  .nav__links--open {
+    transform: translateX(0);
+  }
+
+  .nav__links li {
+    overflow: hidden;
+  }
+
   .nav__link {
-    font-size: var(--text-2xl);
+    display: block;
+    font-size: var(--text-lg);
     font-family: var(--font-heading);
-    padding: var(--space-3) var(--space-6);
-    transform: translateY(20px);
+    padding: var(--space-3) var(--space-4);
+    color: var(--color-neutral-700);
+    border-radius: 0;
+    transition: all var(--duration-fast) var(--ease-out);
+    transform: translateX(20px);
     opacity: 0;
-    transition: all var(--duration-slow) var(--ease-out);
-    color: var(--color-neutral-800);
+  }
+
+  /* Hide desktop underline in mobile drawer */
+  .nav__link::after {
+    display: none;
+  }
+
+  .nav__link:hover {
+    background: var(--color-primary-50);
+    color: var(--color-primary-700);
   }
 
   .nav__link--active {
     color: var(--color-primary-700);
-  }
-
-  .nav__link:hover {
-    color: var(--color-primary-700);
+    font-weight: 600;
   }
 
   .nav__links--open .nav__link {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 
-  .nav__links--open li:nth-child(1) .nav__link { transition-delay: 100ms; }
-  .nav__links--open li:nth-child(2) .nav__link { transition-delay: 175ms; }
-  .nav__links--open li:nth-child(3) .nav__link { transition-delay: 250ms; }
-  .nav__links--open li:nth-child(4) .nav__link { transition-delay: 325ms; }
+  .nav__links--open li:nth-child(1) .nav__link { transition-delay: 80ms; }
+  .nav__links--open li:nth-child(2) .nav__link { transition-delay: 140ms; }
+  .nav__links--open li:nth-child(3) .nav__link { transition-delay: 200ms; }
+  .nav__links--open li:nth-child(4) .nav__link { transition-delay: 260ms; }
+
+  /* Separator between links */
+  .nav__links li + li {
+    border-top: 1px solid var(--color-neutral-100);
+  }
 
   .nav__container {
     padding: 0 var(--space-4);
